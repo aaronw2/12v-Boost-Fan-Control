@@ -12,11 +12,10 @@
   (page USLetter)
   (title_block
     (title "5v to 12v booster")
-    (date 2018-10-22)
-    (rev 1.2.1)
+    (rev 1.0)
     (company "Copyright © 2018 by Aaron Williams")
     (comment 1 "5V to 12V boost converter")
-    (comment 2 "Limited to 1A")
+    (comment 2 "Limited to 300ma")
   )
 
   (layers
