@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L texas:TPS55340-Q1 U1
+L 12v-booster-rescue:TPS55340-Q1-texas U1
 U 1 1 5BAB0E99
 P 4950 3000
 F 0 "U1" H 4950 3875 50  0000 C CNN
@@ -165,45 +165,13 @@ P 6400 3600
 F 0 "C7" H 6515 3646 50  0000 L CNN
 F 1 "47nF" H 6515 3555 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 6438 3450 50  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL10B473KO8WPNC.jsp" H 6400 3600 50  0001 C CNN
-F 4 "Samsung" H 0   0   50  0001 C CNN "MFR"
-F 5 "CL10B473KO8WPNC" H 0   0   50  0001 C CNN "MPN"
+F 3 "" H 6400 3600 50  0001 C CNN
+F 4 "Murata" H 0   0   50  0001 C CNN "MFR"
+F 5 "GRM188R61H474KA12D" H 0   0   50  0001 C CNN "MPN"
 F 6 "Digikey" H 0   0   50  0001 C CNN "SPR"
-F 7 "1276-6852-1-ND" H 0   0   50  0001 C CNN "SPN"
+F 7 "490-11994-1-ND" H 0   0   50  0001 C CNN "SPN"
 F 8 "-" H 0   0   50  0001 C CNN "SPURL"
 	1    6400 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 5BAB1556
-P 7100 3250
-F 0 "R4" H 7170 3296 50  0000 L CNN
-F 1 "10k" H 7170 3205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 7030 3250 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/20035/dcrcwe3.pdf" H 7100 3250 50  0001 C CNN
-F 4 "Vishay Dale" H 0   0   50  0001 C CNN "MFR"
-F 5 "CRCW060310K0FKEC" H 0   0   50  0001 C CNN "MPN"
-F 6 "Digikey" H 0   0   50  0001 C CNN "SPR"
-F 7 "541-2979-1-ND" H 0   0   50  0001 C CNN "SPN"
-F 8 "-" H 0   0   50  0001 C CNN "SPURL"
-	1    7100 3250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R1
-U 1 1 5BAB15CB
-P 7100 2600
-F 0 "R1" H 7170 2646 50  0000 L CNN
-F 1 "86.6k" H 7170 2555 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 7030 2600 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/20035/dcrcwe3.pdf" H 7100 2600 50  0001 C CNN
-F 4 "Vishay Dale" H 0   0   50  0001 C CNN "MFR"
-F 5 "CRCW060386K6FKEA" H 0   0   50  0001 C CNN "MPN"
-F 6 "Digikey" H 0   0   50  0001 C CNN "SPR"
-F 7 "541-86.6KHCT-ND" H 0   0   50  0001 C CNN "SPN"
-F 8 "-" H 0   0   50  0001 C CNN "SPURL"
-	1    7100 2600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -416,11 +384,7 @@ Wire Wire Line
 Wire Wire Line
 	5850 3750 6400 3750
 Wire Wire Line
-	7100 3100 7100 2750
-Wire Wire Line
 	5850 2750 7100 2750
-Wire Wire Line
-	7100 2450 6450 2450
 Wire Wire Line
 	5850 2550 5850 2450
 Wire Wire Line
@@ -428,19 +392,11 @@ Wire Wire Line
 Wire Wire Line
 	5850 2450 6150 2450
 Wire Wire Line
-	7100 2450 7550 2450
-Wire Wire Line
 	7550 2450 7550 2700
 Wire Wire Line
 	7550 2450 8000 2450
 Wire Wire Line
 	8000 2450 8000 2700
-Wire Wire Line
-	6400 3750 7100 3750
-Wire Wire Line
-	7100 3750 7100 3400
-Wire Wire Line
-	7100 3750 7550 3750
 Wire Wire Line
 	7550 3750 7550 3000
 Wire Wire Line
@@ -462,8 +418,6 @@ Wire Wire Line
 Wire Wire Line
 	8000 2450 8500 2450
 Wire Wire Line
-	8500 2450 8500 2550
-Wire Wire Line
 	2200 3050 2350 3050
 Wire Wire Line
 	2350 3150 2200 3150
@@ -484,11 +438,15 @@ Wire Wire Line
 Wire Wire Line
 	8000 3750 8300 3750
 Wire Wire Line
+	8300 2750 8300 3750
+Wire Wire Line
 	8400 2850 8500 2850
 Wire Wire Line
 	8500 2750 8300 2750
 Wire Wire Line
-	8300 2750 8300 3750
+	8500 2550 8500 2650
+Wire Wire Line
+	8500 2450 8500 2550
 Connection ~ 4050 2400
 Connection ~ 3200 2400
 Connection ~ 2800 2400
@@ -500,12 +458,9 @@ Connection ~ 3950 3900
 Connection ~ 3700 3900
 Connection ~ 3200 3900
 Connection ~ 5850 3000
-Connection ~ 7100 2750
 Connection ~ 5850 2450
-Connection ~ 7100 2450
 Connection ~ 7550 2450
 Connection ~ 6400 3750
-Connection ~ 7100 3750
 Connection ~ 7550 3750
 Connection ~ 8000 2450
 Connection ~ 5850 2350
@@ -514,7 +469,61 @@ Connection ~ 2800 3900
 Connection ~ 8050 4100
 Connection ~ 8400 4400
 Connection ~ 5050 3900
-Wire Wire Line
-	8500 2550 8500 2650
 Connection ~ 8500 2550
+Text Label 5850 2750 0    50   ~ 0
+FB
+Text Label 5850 3350 1    50   ~ 0
+COMP
+Text Label 3700 2800 0    50   ~ 0
+FREQ
+Text Label 3950 3400 0    50   ~ 0
+SS
+NoConn ~ 5500 3900
+Wire Wire Line
+	7100 3750 7550 3750
+Wire Wire Line
+	6400 3750 7100 3750
+Connection ~ 7100 3750
+Wire Wire Line
+	7100 3750 7100 3400
+Wire Wire Line
+	7100 3100 7100 2750
+$Comp
+L Device:R R4
+U 1 1 5BAB1556
+P 7100 3250
+F 0 "R4" H 7170 3296 50  0000 L CNN
+F 1 "10k" H 7170 3205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7030 3250 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/20035/dcrcwe3.pdf" H 7100 3250 50  0001 C CNN
+F 4 "Vishay Dale" H 0   0   50  0001 C CNN "MFR"
+F 5 "CRCW060310K0FKEC" H 0   0   50  0001 C CNN "MPN"
+F 6 "Digikey" H 0   0   50  0001 C CNN "SPR"
+F 7 "541-2979-1-ND" H 0   0   50  0001 C CNN "SPN"
+F 8 "-" H 0   0   50  0001 C CNN "SPURL"
+	1    7100 3250
+	1    0    0    -1  
+$EndComp
+Connection ~ 7100 2750
+Wire Wire Line
+	7100 2450 7550 2450
+Wire Wire Line
+	7100 2450 6450 2450
+Connection ~ 7100 2450
+$Comp
+L Device:R R1
+U 1 1 5BAB15CB
+P 7100 2600
+F 0 "R1" H 7170 2646 50  0000 L CNN
+F 1 "86.6k" H 7170 2555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7030 2600 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/20035/dcrcwe3.pdf" H 7100 2600 50  0001 C CNN
+F 4 "Vishay Dale" H 0   0   50  0001 C CNN "MFR"
+F 5 "CRCW060386K6FKEA" H 0   0   50  0001 C CNN "MPN"
+F 6 "Digikey" H 0   0   50  0001 C CNN "SPR"
+F 7 "541-86.6KHCT-ND" H 0   0   50  0001 C CNN "SPN"
+F 8 "-" H 0   0   50  0001 C CNN "SPURL"
+	1    7100 2600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

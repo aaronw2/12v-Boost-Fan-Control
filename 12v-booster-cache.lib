@@ -1,11 +1,43 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Connector_Generic:Conn_01x03
+# 12v-booster-rescue_TPS55340-Q1-texas
 #
-DEF Connector_Generic:Conn_01x03 J 0 40 Y N 1 F N
+DEF 12v-booster-rescue_TPS55340-Q1-texas U 0 40 Y Y 1 F N
+F0 "U" -550 750 50 H V C CNN
+F1 "12v-booster-rescue_TPS55340-Q1-texas" 0 0 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Housings_DFN_QFN:QFN-16-1EP_3x3mm_Pitch0.5mm_ThermalVias
+$ENDFPLIST
+DRAW
+S -700 700 700 -700 0 1 0 N
+X SW 1 900 650 200 L 50 50 1 1 I
+X NC 10 700 -250 200 L 50 50 1 1 N N
+X PGND 11 -100 -900 200 U 50 50 1 1 W
+X PGND 12 0 -900 200 U 50 50 1 1 W
+X PGND 13 100 -900 200 U 50 50 1 1 W
+X NC 14 700 -350 200 L 50 50 1 1 N N
+X SW 15 900 550 200 L 50 50 1 1 I
+X SW 16 900 450 200 L 50 50 1 1 I
+X AGND 17 -400 -900 200 U 50 50 1 1 W
+X VIN 2 -900 600 200 R 50 50 1 1 W
+X EN 3 -900 400 200 R 50 50 1 1 I
+X SS 4 -900 -400 200 R 50 50 1 1 I
+X SYNC 5 550 -900 200 U 50 50 1 1 I
+X AGND 6 -500 -900 200 U 50 50 1 1 W
+X COMP 7 900 0 200 L 50 50 1 1 O
+X FB 8 900 250 200 L 50 50 1 1 P
+X FREQ 9 -900 200 200 R 50 50 1 1 O
+ENDDRAW
+ENDDEF
+#
+# Connector_Generic_Conn_01x03
+#
+DEF Connector_Generic_Conn_01x03 J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "Connector_Generic:Conn_01x03" 0 -200 50 H V C CNN
+F1 "Connector_Generic_Conn_01x03" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -22,11 +54,11 @@ X Pin_3 3 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic:Conn_01x04
+# Connector_Generic_Conn_01x04
 #
-DEF Connector_Generic:Conn_01x04 J 0 40 Y N 1 F N
+DEF Connector_Generic_Conn_01x04 J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "Connector_Generic:Conn_01x04" 0 -300 50 H V C CNN
+F1 "Connector_Generic_Conn_01x04" 0 -300 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -45,11 +77,11 @@ X Pin_4 4 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:C
+# Device_C
 #
-DEF Device:C C 0 10 N Y 1 F N
+DEF Device_C C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
-F1 "Device:C" 25 -100 50 H V L CNN
+F1 "Device_C" 25 -100 50 H V L CNN
 F2 "" 38 -150 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -63,11 +95,11 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:D_Schottky
+# Device_D_Schottky
 #
-DEF Device:D_Schottky D 0 40 N N 1 F N
+DEF Device_D_Schottky D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "Device:D_Schottky" 0 -100 50 H V C CNN
+F1 "Device_D_Schottky" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -85,11 +117,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:L
+# Device_L
 #
-DEF Device:L L 0 40 N N 1 F N
+DEF Device_L L 0 40 N N 1 F N
 F0 "L" -50 0 50 V V C CNN
-F1 "Device:L" 75 0 50 V V C CNN
+F1 "Device_L" 75 0 50 V V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -108,11 +140,11 @@ X 2 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:R
+# Device_R
 #
-DEF Device:R R 0 0 N Y 1 F N
+DEF Device_R R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Device:R" 0 0 50 V V C CNN
+F1 "Device_R" 0 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -125,11 +157,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Transistor_FET:BSS214NW
+# Transistor_FET_BSS214NW
 #
-DEF Transistor_FET:BSS214NW Q 0 0 Y N 1 F N
+DEF Transistor_FET_BSS214NW Q 0 0 Y N 1 F N
 F0 "Q" 200 75 50 H V L CNN
-F1 "Transistor_FET:BSS214NW" 200 0 50 H V L CNN
+F1 "Transistor_FET_BSS214NW" 200 0 50 H V L CNN
 F2 "Package_TO_SOT_SMD:SOT-323_SC-70" 200 -75 50 H I L CIN
 F3 "" 0 0 50 H I L CNN
 $FPLIST
@@ -159,11 +191,11 @@ X D 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# power:+12V
+# power_+12V
 #
-DEF power:+12V #PWR 0 0 Y Y 1 F P
+DEF power_+12V #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:+12V" 0 140 50 H V C CNN
+F1 "power_+12V" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -174,11 +206,11 @@ X +12V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# power:+5V
+# power_+5V
 #
-DEF power:+5V #PWR 0 0 Y Y 1 F P
+DEF power_+5V #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:+5V" 0 140 50 H V C CNN
+F1 "power_+5V" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -189,48 +221,16 @@ X +5V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# power:GND
+# power_GND
 #
-DEF power:GND #PWR 0 0 Y Y 1 F P
+DEF power_GND #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power:GND" 0 -150 50 H V C CNN
+F1 "power_GND" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
 P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
 X GND 1 0 0 0 D 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# texas:TPS55340-Q1
-#
-DEF texas:TPS55340-Q1 U 0 40 Y Y 1 F N
-F0 "U" -550 750 50 H V C CNN
-F1 "texas:TPS55340-Q1" 0 0 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Housings_DFN_QFN:QFN-16-1EP_3x3mm_Pitch0.5mm_ThermalVias
-$ENDFPLIST
-DRAW
-S -700 700 700 -700 0 1 0 N
-X SW 1 900 650 200 L 50 50 1 1 I
-X NC 10 700 -250 200 L 50 50 1 1 N N
-X PGND 11 -100 -900 200 U 50 50 1 1 W
-X PGND 12 0 -900 200 U 50 50 1 1 W
-X PGND 13 100 -900 200 U 50 50 1 1 W
-X NC 14 700 -350 200 L 50 50 1 1 N N
-X SW 15 900 550 200 L 50 50 1 1 I
-X SW 16 900 450 200 L 50 50 1 1 I
-X AGND 17 -400 -900 200 U 50 50 1 1 W
-X VIN 2 -900 600 200 R 50 50 1 1 W
-X EN 3 -900 400 200 R 50 50 1 1 I
-X SS 4 -900 -400 200 R 50 50 1 1 I
-X SYNC 5 550 -900 200 U 50 50 1 1 I
-X AGND 6 -500 -900 200 U 50 50 1 1 W
-X COMP 7 900 0 200 L 50 50 1 1 O
-X FB 8 900 250 200 L 50 50 1 1 P
-X FREQ 9 -900 200 200 R 50 50 1 1 O
 ENDDRAW
 ENDDEF
 #

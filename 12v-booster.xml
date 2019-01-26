@@ -2,16 +2,16 @@
 <export version="D">
   <design>
     <source>/home/aaronw/kicad/Projects/12v-booster/12v-booster.sch</source>
-    <date>Wed 26 Sep 2018 02:15:08 AM PDT</date>
-    <tool>Eeschema 5.0.0</tool>
+    <date>Tue 23 Oct 2018 10:38:01 AM PDT</date>
+    <tool>Eeschema 5.0.0-5.0.0</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
-        <title/>
-        <company/>
-        <rev/>
-        <date/>
+        <title>5V to 12V boost converter with PWM control</title>
+        <company>Copyright (C) 2018 by Aaron Williams</company>
+        <rev>1.1</rev>
+        <date>2018-09-26</date>
         <source>12v-booster.sch</source>
-        <comment number="1" value=""/>
+        <comment number="1" value="Based off of TI's Web Bench design"/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
         <comment number="4" value=""/>
@@ -21,7 +21,7 @@
   <components>
     <comp ref="U1">
       <value>TPS55340-Q1</value>
-      <footprint>Housings_DFN_QFN:QFN-16-1EP_3x3mm_Pitch0.5mm_ThermalVias</footprint>
+      <footprint>Aaron:QFN-16-1EP_3x3mm_P0.5mm_EP2.7x2.7mm_ThermalVias</footprint>
       <datasheet>http://www.ti.com/lit/ds/symlink/tps55340-q1.pdf</datasheet>
       <fields>
         <field name="MFR">TI</field>
@@ -30,18 +30,18 @@
         <field name="SPR">Digikey</field>
         <field name="SPURL">-</field>
       </fields>
-      <libsource lib="texas" part="TPS55340-Q1" description="Wide Input Range Boost, SEPIC, or Flyback DC-DC Converter"/>
+      <libsource lib="" part="TPS55340-Q1" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BAB0E99</tstamp>
     </comp>
     <comp ref="L1">
       <value>3.3uH</value>
-      <footprint>Inductor_SMD:L_Vishay_IHLP-1212</footprint>
-      <datasheet>http://search.murata.co.jp/Ceramy/image/img/P02/JELF243B-0047.pdf</datasheet>
+      <footprint>Aaron:L_Vishay_IHLP-1212</footprint>
+      <datasheet>http://www.vishay.com/docs/34289/lp12bz11.pdf</datasheet>
       <fields>
-        <field name="MFR">Murata</field>
-        <field name="MPN">LQM18PN3R3MGHD</field>
-        <field name="SPN">490-15635-1-ND</field>
+        <field name="MFR">Vishay Dale</field>
+        <field name="MPN">IHLP1212BZER3R3M11</field>
+        <field name="SPN">541-2567-1-ND</field>
         <field name="SPR">Digikey</field>
         <field name="SPURL">-</field>
       </fields>
@@ -51,12 +51,12 @@
     </comp>
     <comp ref="D1">
       <value>D_Schottky</value>
-      <footprint>Diodes_SMD:D_SOD-123F</footprint>
-      <datasheet>http://www.vishay.com/docs/85898/vsky20301608.pdf</datasheet>
+      <footprint>Diode_SMD:D_SOD-123F</footprint>
+      <datasheet>https://www.fairchildsemi.com/datasheets/SS/SS24FL.pdf</datasheet>
       <fields>
-        <field name="MFR">Vishay</field>
-        <field name="MPN">VSKY20301608-G4-08</field>
-        <field name="SPN">VSKY20301608-G4-08GICT-ND</field>
+        <field name="MFR">ON</field>
+        <field name="MPN">SS24FL</field>
+        <field name="SPN">SS24FLCT-ND</field>
         <field name="SPR">Digikey</field>
         <field name="SPURL">-</field>
       </fields>
@@ -231,7 +231,7 @@
     </comp>
     <comp ref="J1">
       <value>Conn_01x04</value>
-      <footprint>Pin_Headers:Pin_Header_Angled_1x04_Pitch2.54mm</footprint>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="MFR">-</field>
@@ -246,7 +246,7 @@
     </comp>
     <comp ref="J2">
       <value>Conn_01x03</value>
-      <footprint>Pin_Headers:Pin_Header_Angled_1x03_Pitch2.54mm</footprint>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="MFR">-</field>
@@ -291,6 +291,34 @@
     </comp>
   </components>
   <libparts>
+    <libpart lib="" part="texas:TPS55340-Q1">
+      <footprints>
+        <fp>Housings_DFN_QFN:QFN-16-1EP_3x3mm_Pitch0.5mm_ThermalVias</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">texas:TPS55340-Q1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SW" type="input"/>
+        <pin num="2" name="VIN" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="SS" type="input"/>
+        <pin num="5" name="SYNC" type="input"/>
+        <pin num="6" name="AGND" type="power_in"/>
+        <pin num="7" name="COMP" type="output"/>
+        <pin num="8" name="FB" type="passive"/>
+        <pin num="9" name="FREQ" type="output"/>
+        <pin num="10" name="NC" type="NotConnected"/>
+        <pin num="11" name="PGND" type="power_in"/>
+        <pin num="12" name="PGND" type="power_in"/>
+        <pin num="13" name="PGND" type="power_in"/>
+        <pin num="14" name="NC" type="NotConnected"/>
+        <pin num="15" name="SW" type="input"/>
+        <pin num="16" name="SW" type="input"/>
+        <pin num="17" name="AGND" type="power_in"/>
+      </pins>
+    </libpart>
     <libpart lib="Connector_Generic" part="Conn_01x03">
       <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
       <docs>~</docs>
@@ -407,36 +435,6 @@
         <pin num="3" name="D" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="texas" part="TPS55340-Q1">
-      <description>Wide Input Range Boost, SEPIC, or Flyback DC-DC Converter</description>
-      <docs>http://www.ti.com/lit/ds/symlink/tps55340-q1.pdf</docs>
-      <footprints>
-        <fp>Housings_DFN_QFN:QFN-16-1EP_3x3mm_Pitch0.5mm_ThermalVias</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">TPS55340-Q1</field>
-      </fields>
-      <pins>
-        <pin num="1" name="SW" type="input"/>
-        <pin num="2" name="VIN" type="power_in"/>
-        <pin num="3" name="EN" type="input"/>
-        <pin num="4" name="SS" type="input"/>
-        <pin num="5" name="SYNC" type="input"/>
-        <pin num="6" name="AGND" type="power_in"/>
-        <pin num="7" name="COMP" type="output"/>
-        <pin num="8" name="FB" type="passive"/>
-        <pin num="9" name="FREQ" type="output"/>
-        <pin num="10" name="NC" type="NotConnected"/>
-        <pin num="11" name="PGND" type="power_in"/>
-        <pin num="12" name="PGND" type="power_in"/>
-        <pin num="13" name="PGND" type="power_in"/>
-        <pin num="14" name="NC" type="NotConnected"/>
-        <pin num="15" name="SW" type="input"/>
-        <pin num="16" name="SW" type="input"/>
-        <pin num="17" name="AGND" type="power_in"/>
-      </pins>
-    </libpart>
   </libparts>
   <libraries>
     <library logical="Connector_Generic">
@@ -448,56 +446,53 @@
     <library logical="Transistor_FET">
       <uri>/usr/share/kicad/library/Transistor_FET.lib</uri>
     </library>
-    <library logical="texas">
-      <uri>/home/aaronw/.local/share/kicad/library-repos/kicad-library/library/texas.lib</uri>
-    </library>
   </libraries>
   <nets>
-    <net code="1" name="+12V">
-      <node ref="D1" pin="1"/>
-      <node ref="C3" pin="1"/>
-      <node ref="R1" pin="1"/>
-      <node ref="C4" pin="1"/>
-      <node ref="J1" pin="1"/>
-    </net>
-    <net code="2" name="Net-(C6-Pad1)">
+    <net code="1" name="Net-(C6-Pad1)">
+      <node ref="U1" pin="7"/>
       <node ref="R3" pin="2"/>
       <node ref="C6" pin="1"/>
-      <node ref="U1" pin="7"/>
     </net>
-    <net code="3" name="Net-(C5-Pad1)">
-      <node ref="C5" pin="1"/>
+    <net code="2" name="Net-(C5-Pad1)">
       <node ref="U1" pin="4"/>
+      <node ref="C5" pin="1"/>
     </net>
-    <net code="4" name="Net-(C7-Pad1)">
-      <node ref="C7" pin="1"/>
+    <net code="3" name="Net-(C7-Pad1)">
       <node ref="R3" pin="1"/>
+      <node ref="C7" pin="1"/>
     </net>
-    <net code="5" name="Net-(R1-Pad2)">
+    <net code="4" name="Net-(R1-Pad2)">
+      <node ref="U1" pin="8"/>
       <node ref="R1" pin="2"/>
       <node ref="R4" pin="1"/>
-      <node ref="U1" pin="8"/>
     </net>
-    <net code="6" name="GND">
-      <node ref="C2" pin="2"/>
+    <net code="5" name="GND">
       <node ref="C7" pin="2"/>
-      <node ref="J1" pin="2"/>
-      <node ref="J1" pin="3"/>
-      <node ref="C5" pin="2"/>
-      <node ref="J2" pin="2"/>
+      <node ref="U1" pin="12"/>
+      <node ref="U1" pin="13"/>
+      <node ref="U1" pin="17"/>
+      <node ref="C3" pin="2"/>
+      <node ref="U1" pin="6"/>
       <node ref="R2" pin="2"/>
-      <node ref="C4" pin="2"/>
+      <node ref="R4" pin="2"/>
+      <node ref="C2" pin="2"/>
       <node ref="C1" pin="2"/>
       <node ref="C6" pin="2"/>
-      <node ref="R5" pin="2"/>
-      <node ref="U1" pin="6"/>
-      <node ref="C3" pin="2"/>
-      <node ref="U1" pin="17"/>
-      <node ref="U1" pin="13"/>
-      <node ref="U1" pin="12"/>
+      <node ref="C5" pin="2"/>
       <node ref="U1" pin="11"/>
+      <node ref="C4" pin="2"/>
+      <node ref="J1" pin="3"/>
+      <node ref="J2" pin="2"/>
+      <node ref="R5" pin="2"/>
       <node ref="Q1" pin="2"/>
-      <node ref="R4" pin="2"/>
+    </net>
+    <net code="6" name="+12V">
+      <node ref="R1" pin="1"/>
+      <node ref="J1" pin="1"/>
+      <node ref="C4" pin="1"/>
+      <node ref="C3" pin="1"/>
+      <node ref="J1" pin="2"/>
+      <node ref="D1" pin="1"/>
     </net>
     <net code="7" name="Net-(U1-Pad10)">
       <node ref="U1" pin="10"/>
@@ -506,26 +501,26 @@
       <node ref="U1" pin="14"/>
     </net>
     <net code="9" name="+5V">
-      <node ref="U1" pin="2"/>
       <node ref="L1" pin="1"/>
-      <node ref="J2" pin="3"/>
-      <node ref="C1" pin="1"/>
       <node ref="C2" pin="1"/>
+      <node ref="C1" pin="1"/>
       <node ref="U1" pin="3"/>
+      <node ref="U1" pin="2"/>
+      <node ref="J2" pin="3"/>
     </net>
     <net code="10" name="Net-(U1-Pad5)">
       <node ref="U1" pin="5"/>
     </net>
     <net code="11" name="Net-(R2-Pad1)">
-      <node ref="U1" pin="9"/>
       <node ref="R2" pin="1"/>
+      <node ref="U1" pin="9"/>
     </net>
     <net code="12" name="/SW">
-      <node ref="D1" pin="2"/>
       <node ref="U1" pin="15"/>
+      <node ref="D1" pin="2"/>
+      <node ref="L1" pin="2"/>
       <node ref="U1" pin="16"/>
       <node ref="U1" pin="1"/>
-      <node ref="L1" pin="2"/>
     </net>
     <net code="13" name="/FET_CTL">
       <node ref="J2" pin="1"/>
