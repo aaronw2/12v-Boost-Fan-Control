@@ -12,11 +12,11 @@
   (page USLetter)
   (title_block
     (title "5v to 12v booster")
-    (date 2018-10-22)
-    (rev 1.2.1)
+    (date 2019-02-04)
+    (rev 1.2.3)
     (company "Copyright © 2018 by Aaron Williams")
     (comment 1 "5V to 12V boost converter")
-    (comment 2 "Limited to 1A")
+    (comment 2 "Limited to 400ma")
   )
 
   (layers
@@ -1008,7 +1008,7 @@
   (gr_line (start 115 80.7) (end 115.4 81) (layer F.SilkS) (width 0.1))
   (gr_line (start 115.6 77.5) (end 115.8 77.5) (layer F.SilkS) (width 0.1))
   (gr_line (start 115.2 79.5) (end 115.7 79.6) (layer F.SilkS) (width 0.1))
-  (gr_text "Version 1.2.1" (at 125.55 74.9) (layer B.SilkS)
+  (gr_text "Version 1.2.2" (at 125.55 74.9) (layer B.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.1)) (justify mirror))
   )
   (gr_line (start 114.5 76.55) (end 114.8 76.45) (layer F.SilkS) (width 0.2))

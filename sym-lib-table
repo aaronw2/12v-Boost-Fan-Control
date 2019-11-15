@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name 12v-booster-rescue)(type Legacy)(uri ${KIPRJMOD}/12v-booster-rescue.lib)(options "")(descr ""))
+)

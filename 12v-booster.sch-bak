@@ -567,8 +567,4 @@ Connection ~ 7700 2450
 Wire Wire Line
 	7700 2450 8000 2450
 Connection ~ 8500 2450
-Text Label 3350 2400 0    50   ~ 0
-VIN
-Text Label 6700 2450 0    50   ~ 0
-VOUT
 $EndSCHEMATC
